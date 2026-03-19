@@ -495,7 +495,7 @@ nav[aria-label="Main navigation"] {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.06);
@@ -506,7 +506,7 @@ nav[aria-label="Main navigation"] {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.85rem 1.1rem;
+  padding: 1rem 1.3rem;
   background: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -531,10 +531,10 @@ nav[aria-label="Main navigation"] {
 }
 
 .dash-body {
-  padding: 1.25rem 1.1rem;
+  padding: 1.45rem 1.3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .dash-metric {
