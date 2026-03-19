@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════
-   Datamitra — Design System
-   Inspired by Databricks: Inter font, clean white nav,
-   deep navy hero, crisp card grids, mobile-first.
-   ═══════════════════════════════════════════════════════════ */
+  Datamitra — Design System
+  Canva Sans typography, logo-red brand system,
+  deep navy hero, crisp card grids, mobile-first.
+  ═══════════════════════════════════════════════════════════ */
 
 /* ─── Design tokens ───────────────────────────────────────── */
 :root {
@@ -17,20 +17,15 @@
   --text-2: #344054;
   --muted: #667085;
 
-  /* Brand — teal */
-  --brand: #0f766e;
-  --brand-dark: #0a5954;
-  --brand-light: #ccfbf1;
-  --brand-glow: rgba(15, 118, 110, 0.15);
+  /* Brand — logo red */
+  --brand: #a22828;
+  --brand-dark: #7f1f1f;
+  --brand-light: #fde8e8;
+  --brand-glow: rgba(162, 40, 40, 0.22);
 
-  /* Logo color — red */
-  --logo: #a22828;
-  --logo-dark: #7f1f1f;
-  --logo-glow: rgba(162, 40, 40, 0.25);
-
-  /* Accent — amber */
-  --accent: #f59e0b;
-  --accent-dark: #d97706;
+  /* Accent — tonal red */
+  --accent: #c94a4a;
+  --accent-dark: #962323;
 
   /* Hero */
   --hero-bg: #0f1629;
@@ -192,62 +187,62 @@ img { max-width: 100%; display: block; }
 
 /* Nav "Get Started" */
 .btn-nav {
-  background: var(--logo);
+  background: var(--brand);
   color: #fff;
-  border-color: var(--logo);
+  border-color: var(--brand);
   font-size: 0.85rem;
   padding: 0.52rem 1.05rem;
   border-radius: var(--radius-sm);
 }
 
 .btn-nav:hover {
-  background: var(--logo-dark);
-  border-color: var(--logo-dark);
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
   color: #fff;
 }
 
 /* Hero primary — logo red fill on dark */
 .btn-hero-primary {
-  background: var(--logo);
+  background: var(--brand);
   color: #ffffff;
-  border-color: var(--logo);
+  border-color: var(--brand);
   font-size: 0.95rem;
   padding: 0.78rem 1.6rem;
 }
 
 .btn-hero-primary:hover {
-  background: var(--logo-dark);
-  border-color: var(--logo-dark);
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
   color: #fff;
-  box-shadow: 0 4px 16px var(--logo-glow);
+  box-shadow: 0 4px 16px var(--brand-glow);
 }
 
 /* Hero ghost — logo red outline */
 .btn-hero-ghost {
   background: transparent;
-  color: rgba(255, 228, 228, 0.95);
-  border-color: rgba(255, 214, 214, 0.55);
+  color: rgba(255, 236, 236, 0.95);
+  border-color: rgba(248, 190, 190, 0.6);
   font-size: 0.95rem;
   padding: 0.78rem 1.6rem;
 }
 
 .btn-hero-ghost:hover {
-  background: rgba(162, 40, 40, 0.18);
-  border-color: rgba(255, 214, 214, 0.9);
+  background: var(--brand-glow);
+  border-color: rgba(255, 224, 224, 0.95);
   color: #ffffff;
 }
 
 /* Section form submit */
 .btn-primary {
-  background: var(--logo);
+  background: var(--brand);
   color: #fff;
-  border-color: var(--logo);
+  border-color: var(--brand);
 }
 
 .btn-primary:hover {
-  background: var(--logo-dark);
-  border-color: var(--logo-dark);
-  box-shadow: 0 4px 12px var(--logo-glow);
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+  box-shadow: 0 4px 12px var(--brand-glow);
 }
 
 /* Focus ring — accessible */
@@ -255,7 +250,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--logo);
+  outline: 2px solid var(--brand);
   outline-offset: 2px;
 }
 
@@ -395,9 +390,9 @@ nav[aria-label="Main navigation"] {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 70% 80% at -10% 10%, rgba(15, 118, 110, 0.55) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(245, 158, 11, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 80% at 50% 120%, rgba(10, 89, 84, 0.35) 0%, transparent 65%);
+    radial-gradient(ellipse 70% 80% at -10% 10%, rgba(162, 40, 40, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(201, 74, 74, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 50% 120%, rgba(127, 31, 31, 0.38) 0%, transparent 65%);
 }
 
 .hero-bg::after {
@@ -430,10 +425,10 @@ nav[aria-label="Main navigation"] {
   line-height: 1.08;
 }
 
-/* Amber gradient on "full potential." */
+/* Brand gradient on "full potential." */
 .hero-text h1 em {
   font-style: normal;
-  background: linear-gradient(92deg, #fbbf24 0%, var(--accent) 55%, var(--accent-dark) 100%);
+  background: linear-gradient(92deg, #f9d2d2 0%, var(--accent) 55%, var(--brand-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -482,7 +477,7 @@ nav[aria-label="Main navigation"] {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--brand);
   flex-shrink: 0;
 }
 
@@ -564,12 +559,12 @@ nav[aria-label="Main navigation"] {
 .dash-bar {
   height: 100%;
   border-radius: 3px;
-  background: linear-gradient(90deg, var(--brand), #14b8a6);
+  background: linear-gradient(90deg, var(--brand-dark), var(--brand));
   transition: width 1s ease;
 }
 
 .dash-bar--amber {
-  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  background: linear-gradient(90deg, var(--brand-dark), var(--accent));
 }
 
 .dash-val {
@@ -603,7 +598,7 @@ nav[aria-label="Main navigation"] {
 .dash-kpi-num {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--brand);
   letter-spacing: -0.03em;
 }
 
@@ -678,7 +673,7 @@ nav[aria-label="Main navigation"] {
   font-family: var(--font-heading);
   font-size: clamp(1.75rem, 3.2vw, 2.5rem);
   font-weight: 800;
-  color: var(--accent);
+  color: var(--brand);
   letter-spacing: -0.03em;
   line-height: 1;
 }
