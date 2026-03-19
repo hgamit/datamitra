@@ -78,13 +78,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2.8rem, 6.5vw, 5rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
 h2 {
-  font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.75rem);
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -407,8 +407,8 @@ nav[aria-label="Main navigation"] {
 
 .hero-inner {
   position: relative;
-  padding: 6rem 0 3.5rem;
-  max-width: 700px;
+  padding: 8rem 0 4.5rem;
+  max-width: 740px;
 }
 
 .hero-inner h1 {
@@ -419,19 +419,20 @@ nav[aria-label="Main navigation"] {
 /* Accent underline on a key word */
 .hero-inner h1 em {
   font-style: normal;
-  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  background: linear-gradient(92deg, var(--accent) 0%, #fbbf24 60%, var(--accent-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline;
 }
 
 .hero-copy {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.15rem;
   font-weight: 400;
   max-width: 58ch;
-  margin-bottom: 2.2rem;
-  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
 }
 
 .hero-cta {
@@ -519,7 +520,7 @@ nav[aria-label="Main navigation"] {
 
 /* ─── Section defaults ────────────────────────────────────── */
 .section {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background: var(--bg);
 }
 
@@ -541,6 +542,25 @@ nav[aria-label="Main navigation"] {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+.service-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--brand-light);
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.service-item:hover .service-icon {
+  background: var(--brand-glow);
+  transform: scale(1.08);
 }
 
 .service-item {
