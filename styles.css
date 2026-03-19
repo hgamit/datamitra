@@ -435,7 +435,7 @@ nav[aria-label="Main navigation"] {
 }
 
 .hero-copy {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 52ch;
@@ -467,7 +467,7 @@ nav[aria-label="Main navigation"] {
   align-items: center;
   gap: 0.45rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.74);
   font-weight: 500;
   letter-spacing: 0.01em;
 }
@@ -523,7 +523,7 @@ nav[aria-label="Main navigation"] {
   margin-left: 0.6rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -543,7 +543,7 @@ nav[aria-label="Main navigation"] {
 
 .dash-label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   width: 130px;
   flex-shrink: 0;
 }
@@ -603,8 +603,8 @@ nav[aria-label="Main navigation"] {
 }
 
 .dash-kpi-label {
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.62);
   text-align: center;
   line-height: 1.35;
 }
@@ -681,7 +681,7 @@ nav[aria-label="Main navigation"] {
 .stat-label {
   font-size: 0.82rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.68);
   line-height: 1.4;
 }
 
@@ -911,7 +911,7 @@ nav[aria-label="Main navigation"] {
 }
 
 .prefooter-inner p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -1051,7 +1051,7 @@ textarea:focus {
 
 .footer-tagline {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.72);
   margin: 0;
   max-width: 32ch;
   line-height: 1.55;
@@ -1064,7 +1064,7 @@ textarea:focus {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.15s;
@@ -1082,7 +1082,7 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.15s;
@@ -1103,13 +1103,13 @@ textarea:focus {
 
 .footer-bottom p {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.62);
   margin: 0;
 }
 
 .footer-bottom a {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.62);
   text-decoration: none;
   transition: color 0.15s;
 }
