@@ -4,7 +4,7 @@
 //   2. Replace the empty string below with your Formspree endpoint:
 //      e.g. "https://formspree.io/f/abcdefgh"
 //   3. Commit and redeploy.
-// Fallback: if left empty, users are shown a message to email hello@datamitra.ai
+// Fallback: if left empty, users are shown a message to email datamitra@outlook.com
 const FORM_ENDPOINT = "";
 
 const form = document.querySelector("#lead-form");
@@ -111,12 +111,12 @@ if (form) {
     } catch (error) {
       if (String(error.message) === "FORM_ENDPOINT_NOT_CONFIGURED") {
         setStatus(
-          "Form is not configured yet. Please set FORM_ENDPOINT in script.js or email hello@datamitra.ai.",
+          "Form is not configured yet. Please set FORM_ENDPOINT in script.js or email datamitra@outlook.com.",
           "error"
         );
       } else {
         setStatus(
-          "Submission failed. Please try again or email hello@datamitra.ai.",
+          "Submission failed. Please try again or email datamitra@outlook.com.",
           "error"
         );
       }
