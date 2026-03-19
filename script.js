@@ -1,3 +1,10 @@
+// Form endpoint for lead submissions.
+// To activate the contact form:
+//   1. Sign up at https://formspree.io and create a new form.
+//   2. Replace the empty string below with your Formspree endpoint:
+//      e.g. "https://formspree.io/f/abcdefgh"
+//   3. Commit and redeploy.
+// Fallback: if left empty, users are shown a message to email hello@datamitra.ai
 const FORM_ENDPOINT = "";
 
 const form = document.querySelector("#lead-form");
