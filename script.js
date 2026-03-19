@@ -1,11 +1,16 @@
 // Form endpoint for lead submissions.
 // To activate the contact form:
-//   1. Sign up at https://formspree.io and create a new form.
-//   2. Replace the empty string below with your Formspree endpoint:
-//      e.g. "https://formspree.io/f/abcdefgh"
+//   1. Create either:
+//      - a Formspree endpoint, or
+//      - a Google Apps Script Web App endpoint.
+//   2. Replace the empty string below with your endpoint URL.
 //   3. Commit and redeploy.
 // Fallback: if left empty, users are shown a message to email datamitra@outlook.com
 const FORM_ENDPOINT = "";
+
+function isGoogleAppsScriptEndpoint(url) {
+  return /script\.google\.com\/macros\//i.test(url);
+}
 
 const form = document.querySelector("#lead-form");
 const statusEl = document.querySelector("#form-status");
@@ -62,6 +67,29 @@ async function submitToEndpoint(payload) {
     throw new Error("FORM_ENDPOINT_NOT_CONFIGURED");
   }
 
+  if (isGoogleAppsScriptEndpoint(FORM_ENDPOINT)) {
+    const formBody = new URLSearchParams({
+      name: payload.name,
+      email: payload.email,
+      company: payload.company,
+      painPoint: payload.painPoint,
+      consent: payload.consent ? "yes" : "no",
+      submittedAt: payload.submittedAt
+    });
+
+    // Apps Script web apps commonly do not return CORS headers for browser fetch.
+    // no-cors lets the request be sent successfully from this static site.
+    await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: formBody.toString(),
+      mode: "no-cors"
+    });
+    return;
+  }
+
   const response = await fetch(FORM_ENDPOINT, {
     method: "POST",
     headers: {
@@ -111,7 +139,7 @@ if (form) {
     } catch (error) {
       if (String(error.message) === "FORM_ENDPOINT_NOT_CONFIGURED") {
         setStatus(
-          "Form is not configured yet. Please set FORM_ENDPOINT in script.js or email datamitra@outlook.com.",
+          "Form is not configured yet. Please set FORM_ENDPOINT in script.js (Formspree or Google Apps Script) or email datamitra@outlook.com.",
           "error"
         );
       } else {
