@@ -158,7 +158,7 @@ if (form) {
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
-        submitButton.textContent = "Submit";
+        submitButton.textContent = "Get My Next-Step Recommendation";
       }
     }
   });
