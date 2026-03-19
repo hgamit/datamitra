@@ -687,7 +687,7 @@ nav[aria-label="Main navigation"] {
 
 /* ─── Section defaults ────────────────────────────────────── */
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: var(--bg);
 }
 
@@ -697,10 +697,11 @@ nav[aria-label="Main navigation"] {
 
 .section-intro {
   color: var(--muted);
-  font-size: 1.05rem;
-  margin-top: 0.3rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-top: 0.4rem;
   margin-bottom: 0;
-  max-width: 64ch;
+  max-width: 60ch;
 }
 
 /* ─── Service cards ───────────────────────────────────────── */
@@ -752,11 +753,12 @@ nav[aria-label="Main navigation"] {
 /* Colored top accent line on hover */
 .service-item::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--brand), var(--accent));
-  border-radius: 3px 3px 0 0;
-  margin: -1.6rem -1.4rem 1.2rem;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s;
@@ -768,7 +770,7 @@ nav[aria-label="Main navigation"] {
 
 .service-item h3 {
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
@@ -810,33 +812,66 @@ nav[aria-label="Main navigation"] {
   margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .why-item {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 2rem 1.6rem;
+  padding: 1.6rem 1.4rem;
   box-shadow: var(--shadow-xs);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+  overflow: hidden;
+  position: relative;
+}
+
+.why-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
 }
 
 .why-item:hover {
-  box-shadow: var(--shadow);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--brand);
+}
+
+.why-item:hover::before {
+  transform: scaleX(1);
 }
 
 .why-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
   line-height: 1;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--brand-light);
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.why-item:hover .why-icon {
+  background: var(--brand-glow);
+  transform: scale(1.08);
 }
 
 .why-item h3 {
   font-size: 1.05rem;
   color: var(--text);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .why-item p {
@@ -850,7 +885,7 @@ nav[aria-label="Main navigation"] {
 /* Databricks-style dark band before footer */
 .prefooter-cta {
   background: linear-gradient(135deg, #0a2540 0%, var(--hero-bg) 100%);
-  padding: 5.5rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -872,7 +907,6 @@ nav[aria-label="Main navigation"] {
 
 .prefooter-inner h2 {
   color: #ffffff;
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
   margin-bottom: 0.9rem;
 }
 
