@@ -22,6 +22,8 @@
       href="https://fonts.cdnfonts.com/css/canva-sans"
       rel="stylesheet"
     />
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
     <link rel="stylesheet" href="styles.css?v=15" />
   </head>
   <body>
@@ -303,6 +305,23 @@
           <div>
             <p class="eyebrow">Get in touch</p>
             <h2 id="contact-title">Tell us your challenge</h2>
+            <div class="schedule-button-slot">
+              <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    if (window.calendar && calendar.schedulingButton) {
+                      calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xJqnqefHxs3SN1HIREYC6RB4j2PEmnsV8QKAABn4OeJR5J7wa5IbnBYEcuv_zEXPeaNWHMFif?gv=true',
+                        color: '#039BE5',
+                        label: 'Book an appointment',
+                        target,
+                      });
+                    }
+                  });
+                })();
+              </script>
+            </div>
             <p>
               We&rsquo;ll reply with a practical first step, not a sales deck.
             </p>
