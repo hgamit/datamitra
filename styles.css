@@ -1042,6 +1042,12 @@ nav[aria-label="Main navigation"] {
   margin: 0.55rem 0 0.95rem;
 }
 
+.hero-cta .schedule-button-slot,
+.prefooter-btns .schedule-button-slot {
+  margin: 0;
+  display: inline-flex;
+}
+
 #lead-form {
   background: var(--panel);
   border: 1px solid var(--line);

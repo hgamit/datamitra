@@ -24,7 +24,7 @@
     />
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <link rel="stylesheet" href="styles.css?v=15" />
+    <link rel="stylesheet" href="styles.css?v=17" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,7 +64,7 @@
               Datamitra helps business leaders identify high-ROI opportunities, run low-risk pilots, and drive adoption that sticks.
             </p>
             <div class="hero-cta">
-              <a class="btn btn-hero-primary" href="#contact">Book a 20-Minute ROI Assessment</a>
+              <div class="schedule-button-slot" data-schedule-label="Book a 20-Minute ROI Assessment"></div>
               <a class="btn btn-hero-ghost" href="#approach">See How We Work <span aria-hidden="true">&rarr;</span></a>
             </div>
             <ul class="hero-trust" aria-label="Trust signals">
@@ -294,7 +294,7 @@
           <h2>Ready to unlock your data's potential?</h2>
           <p>Talk to our team&mdash;share your challenge and we'll map a practical first step.</p>
           <div class="prefooter-btns">
-            <a class="btn btn-hero-primary" href="#contact">Book a 20-Minute ROI Assessment</a>
+            <div class="schedule-button-slot" data-schedule-label="Book a 20-Minute ROI Assessment"></div>
             <a class="btn btn-hero-ghost" href="mailto:datamitra@outlook.com">Email Us Directly</a>
           </div>
         </div>
@@ -312,23 +312,7 @@
               If the form does not submit, email us directly at
               <a href="mailto:datamitra@outlook.com">datamitra@outlook.com</a>.
             </p>
-            <div class="schedule-button-slot">
-              <script>
-                (function() {
-                  var target = document.currentScript;
-                  window.addEventListener('load', function() {
-                    if (window.calendar && calendar.schedulingButton) {
-                      calendar.schedulingButton.load({
-                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xJqnqefHxs3SN1HIREYC6RB4j2PEmnsV8QKAABn4OeJR5J7wa5IbnBYEcuv_zEXPeaNWHMFif?gv=true',
-                        color: '#A22828',
-                        label: 'Book an appointment',
-                        target,
-                      });
-                    }
-                  });
-                })();
-              </script>
-            </div>
+            <div class="schedule-button-slot" data-schedule-label="Book an appointment"></div>
           </div>
 
           <form id="lead-form" novalidate aria-describedby="form-status">
@@ -404,6 +388,31 @@
       </div>
     </footer>
 
+    <script>
+      window.addEventListener('load', function() {
+        if (!(window.calendar && calendar.schedulingButton)) {
+          return;
+        }
+
+        var bookingUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xJqnqefHxs3SN1HIREYC6RB4j2PEmnsV8QKAABn4OeJR5J7wa5IbnBYEcuv_zEXPeaNWHMFif?gv=true';
+        var targets = document.querySelectorAll('.schedule-button-slot[data-schedule-label]');
+
+        targets.forEach(function(target) {
+          if (target.dataset.schedulingLoaded === 'true') {
+            return;
+          }
+
+          calendar.schedulingButton.load({
+            url: bookingUrl,
+            color: '#A22828',
+            label: target.dataset.scheduleLabel,
+            target: target,
+          });
+
+          target.dataset.schedulingLoaded = 'true';
+        });
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
