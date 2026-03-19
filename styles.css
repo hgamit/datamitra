@@ -23,6 +23,11 @@
   --brand-light: #ccfbf1;
   --brand-glow: rgba(15, 118, 110, 0.15);
 
+  /* Logo color — red */
+  --logo: #a22828;
+  --logo-dark: #7f1f1f;
+  --logo-glow: rgba(162, 40, 40, 0.25);
+
   /* Accent — amber */
   --accent: #f59e0b;
   --accent-dark: #d97706;
@@ -187,62 +192,62 @@ img { max-width: 100%; display: block; }
 
 /* Nav "Get Started" */
 .btn-nav {
-  background: var(--brand);
+  background: var(--logo);
   color: #fff;
-  border-color: var(--brand);
+  border-color: var(--logo);
   font-size: 0.85rem;
   padding: 0.52rem 1.05rem;
   border-radius: var(--radius-sm);
 }
 
 .btn-nav:hover {
-  background: var(--brand-dark);
-  border-color: var(--brand-dark);
+  background: var(--logo-dark);
+  border-color: var(--logo-dark);
   color: #fff;
 }
 
-/* Hero primary — brand teal fill on dark */
+/* Hero primary — logo red fill on dark */
 .btn-hero-primary {
-  background: var(--brand);
+  background: var(--logo);
   color: #ffffff;
-  border-color: var(--brand);
+  border-color: var(--logo);
   font-size: 0.95rem;
   padding: 0.78rem 1.6rem;
 }
 
 .btn-hero-primary:hover {
-  background: var(--brand-dark);
-  border-color: var(--brand-dark);
+  background: var(--logo-dark);
+  border-color: var(--logo-dark);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(15, 118, 110, 0.35);
+  box-shadow: 0 4px 16px var(--logo-glow);
 }
 
-/* Hero ghost — white outline */
+/* Hero ghost — logo red outline */
 .btn-hero-ghost {
   background: transparent;
-  color: rgba(204, 251, 241, 0.95);
-  border-color: rgba(204, 251, 241, 0.45);
+  color: rgba(255, 228, 228, 0.95);
+  border-color: rgba(255, 214, 214, 0.55);
   font-size: 0.95rem;
   padding: 0.78rem 1.6rem;
 }
 
 .btn-hero-ghost:hover {
-  background: rgba(15, 118, 110, 0.18);
-  border-color: rgba(204, 251, 241, 0.75);
+  background: rgba(162, 40, 40, 0.18);
+  border-color: rgba(255, 214, 214, 0.9);
   color: #ffffff;
 }
 
 /* Section form submit */
 .btn-primary {
-  background: var(--brand);
+  background: var(--logo);
   color: #fff;
-  border-color: var(--brand);
+  border-color: var(--logo);
 }
 
 .btn-primary:hover {
-  background: var(--brand-dark);
-  border-color: var(--brand-dark);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+  background: var(--logo-dark);
+  border-color: var(--logo-dark);
+  box-shadow: 0 4px 12px var(--logo-glow);
 }
 
 /* Focus ring — accessible */
@@ -250,7 +255,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--brand);
+  outline: 2px solid var(--logo);
   outline-offset: 2px;
 }
 
