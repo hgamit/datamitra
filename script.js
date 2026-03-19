@@ -15,6 +15,39 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+// ── Mobile hamburger nav ──────────────────────────────────────
+const navToggle = document.querySelector("#nav-toggle");
+const mainNav   = document.querySelector("nav[aria-label='Main navigation']");
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  // Close nav when a link is clicked (single-page scroll)
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+
+  // Close nav on outside click
+  document.addEventListener("click", (e) => {
+    if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+      mainNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+  });
+}
+
 function setStatus(message, type) {
   if (!statusEl) return;
   statusEl.textContent = message;
