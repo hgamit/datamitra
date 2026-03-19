@@ -395,6 +395,16 @@ nav[aria-label="Main navigation"] {
     radial-gradient(ellipse 60% 80% at 50% 120%, rgba(10, 89, 84, 0.35) 0%, transparent 65%);
 }
 
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/hero-bg-orbit.svg") center/cover no-repeat;
+  opacity: 0.38;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
 .hero-bg::after {
   content: "";
   position: absolute;
@@ -1121,7 +1131,7 @@ textarea:focus {
   height: 30px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  filter: none;
   opacity: 0.85;
 }
 
