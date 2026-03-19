@@ -384,62 +384,229 @@ nav[aria-label="Main navigation"] {
   overflow: hidden;
 }
 
-/* Layered radial glows — deep navy with teal + amber tonality */
+/* Layered radial glows */
 .hero-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 70% at -5% -20%, rgba(15, 118, 110, 0.50) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 45% at 95% 15%, rgba(245, 158, 11, 0.15) 0%, transparent 55%),
-    radial-gradient(ellipse 65% 85% at 45% 115%, rgba(10, 89, 84, 0.40) 0%, transparent 65%);
+    radial-gradient(ellipse 70% 80% at -10% 10%, rgba(15, 118, 110, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(245, 158, 11, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 50% 120%, rgba(10, 89, 84, 0.35) 0%, transparent 65%);
 }
 
-/* Subtle dot-grid overlay — Databricks uses grid textures */
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
 }
 
-.hero-inner {
+/* 2-column hero grid */
+.hero-grid {
   position: relative;
-  padding: 8rem 0 4.5rem;
-  max-width: 740px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 5.5rem 0 5rem;
+  min-height: 520px;
 }
 
-.hero-inner h1 {
+.hero-text {
+  max-width: 560px;
+}
+
+.hero-text h1 {
   color: #ffffff;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.08;
 }
 
-/* Accent underline on a key word */
-.hero-inner h1 em {
+/* Amber gradient on "full potential." */
+.hero-text h1 em {
   font-style: normal;
-  background: linear-gradient(92deg, var(--accent) 0%, #fbbf24 60%, var(--accent-dark) 100%);
+  background: linear-gradient(92deg, #fbbf24 0%, var(--accent) 55%, var(--accent-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: inline;
 }
 
 .hero-copy {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 1.15rem;
-  font-weight: 400;
-  max-width: 58ch;
-  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 1.05rem;
   line-height: 1.75;
+  max-width: 52ch;
+  margin-bottom: 2rem;
 }
 
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  gap: 0.85rem;
   align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+/* Trust signals row below CTAs */
+.hero-trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-trust li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.trust-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ─── Dashboard visual card (hero right) ─────────────────── */
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dash-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dash-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dash-dot--green { background: #34d399; }
+.dash-dot--amber { background: var(--accent); }
+.dash-dot--red   { background: #f87171; }
+
+.dash-title {
+  margin-left: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dash-body {
+  padding: 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.dash-metric {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dash-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.dash-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dash-bar {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--brand), #14b8a6);
+  transition: width 1s ease;
+}
+
+.dash-bar--amber {
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+}
+
+.dash-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  width: 38px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.dash-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dash-kpi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.7rem 0.4rem;
+}
+
+.dash-kpi-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+}
+
+.dash-kpi-label {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 1.35;
 }
 
 /* Outcomes bar inside hero bottom */
@@ -572,6 +739,8 @@ nav[aria-label="Main navigation"] {
   transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
 .service-item:hover {
@@ -1000,8 +1169,20 @@ textarea:focus {
     display: none;
   }
 
-  .hero-inner {
-    padding: 4rem 0 2.5rem;
+  /* Hero: stack on mobile */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 4rem 0 3rem;
+    gap: 2.5rem;
+    min-height: unset;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .dash-card {
+    max-width: 100%;
   }
 
   h1 {
