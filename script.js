@@ -6,7 +6,7 @@
 //   2. Replace the empty string below with your endpoint URL.
 //   3. Commit and redeploy.
 // Fallback: if left empty, users are shown a message to email datamitra@outlook.com
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzoup6J3AP9q8Osmrhhhz3BC_CfuHQ1FnodCJdlGahpNfzTIVF6wM0HN58Sy0BGHtcMYQ/exec";
 
 function isGoogleAppsScriptEndpoint(url) {
   return /script\.google\.com\/macros\//i.test(url);
