@@ -1,5 +1,6 @@
 Develop a simple short and persuasive lead generation website for an agency who helps Unlock the full potential of Data and AI solutions. Name of the company Datamitra. The Site will be hosted on Github Pages amd should have Contact Us form capability to assess and register leanding users pain points.
 
+
 Include Why Datamitra, Solution, Resources, About, Assessment Form and COntact Us Forms
 
 At Datamitra, we specialize in integrating Data and AI technologies to help organizations seamlessly adopt and maximize their return on investment.

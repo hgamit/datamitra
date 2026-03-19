@@ -1,0 +1,6 @@
+Google App Script
+Deployment ID
+AKfycbzoup6J3AP9q8Osmrhhhz3BC_CfuHQ1FnodCJdlGahpNfzTIVF6wM0HN58Sy0BGHtcMYQ
+
+URL
+https://script.google.com/macros/s/AKfycbzoup6J3AP9q8Osmrhhhz3BC_CfuHQ1FnodCJdlGahpNfzTIVF6wM0HN58Sy0BGHtcMYQ/exec
