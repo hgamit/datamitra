@@ -801,15 +801,6 @@ nav[aria-label="Main navigation"] {
   line-height: 1.6;
 }
 
-.approach-subtitle {
-  margin-top: 2.2rem;
-  margin-bottom: 0.35rem;
-}
-
-.approach-subintro {
-  margin-bottom: 0.15rem;
-}
-
 /* ─── Service cards ───────────────────────────────────────── */
 .service-grid {
   margin-top: 2.5rem;
@@ -915,7 +906,7 @@ nav[aria-label="Main navigation"] {
 
 /* ─── Why Datamitra ───────────────────────────────────────── */
 .why-grid {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
