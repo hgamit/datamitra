@@ -545,7 +545,7 @@ nav[aria-label="Main navigation"] {
 
 .dash-label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.84);
   width: 130px;
   flex-shrink: 0;
 }
@@ -572,7 +572,7 @@ nav[aria-label="Main navigation"] {
 .dash-val {
   font-size: 0.78rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
   width: 38px;
   text-align: right;
   flex-shrink: 0;
@@ -600,13 +600,13 @@ nav[aria-label="Main navigation"] {
 .dash-kpi-num {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.96);
   letter-spacing: -0.03em;
 }
 
 .dash-kpi-label {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
   line-height: 1.35;
 }
@@ -1272,11 +1272,11 @@ textarea:focus {
   }
 
   .dash-label {
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.88);
   }
 
   .dash-kpi-label {
-    color: rgba(255, 255, 255, 0.92);
+    color: rgba(255, 255, 255, 0.94);
     font-size: 0.7rem;
   }
 
