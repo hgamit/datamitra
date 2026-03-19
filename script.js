@@ -107,10 +107,17 @@ async function submitToEndpoint(payload) {
 if (form) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const consentCheckbox = form.querySelector('#consent');
 
     if (!form.checkValidity()) {
       form.reportValidity();
       setStatus("Please complete all required fields.", "error");
+      return;
+    }
+
+    if (consentCheckbox && !consentCheckbox.checked) {
+      consentCheckbox.focus();
+      setStatus("Please select the consent checkbox before submitting.", "error");
       return;
     }
 
