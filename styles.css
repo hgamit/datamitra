@@ -422,6 +422,7 @@ nav[aria-label="Main navigation"] {
 }
 
 .hero-text h1 {
+  font-size: clamp(2.35rem, 5vw, 4.1rem);
   color: #ffffff;
   margin-bottom: 1.2rem;
   line-height: 1.08;
@@ -740,8 +741,53 @@ nav[aria-label="Main navigation"] {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.35rem 1.25rem;
+  padding: 1.6rem 1.4rem;
   box-shadow: var(--shadow-xs);
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+  overflow: hidden;
+  position: relative;
+}
+
+.why-now-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+.why-now-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--brand);
+}
+
+.why-now-item:hover::before {
+  transform: scaleX(1);
+}
+
+.why-now-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--brand-light);
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.why-now-item:hover .why-now-icon {
+  background: var(--brand-glow);
+  transform: scale(1.08);
 }
 
 .why-now-item h3 {
@@ -1136,6 +1182,15 @@ textarea:focus {
   gap: 0.7rem;
 }
 
+.footer-heading {
+  margin: 0 0 0.4rem;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .footer-links a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -1144,6 +1199,25 @@ textarea:focus {
 }
 
 .footer-links a:hover { color: #ffffff; }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-contact a,
+.footer-contact p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
 
 .footer-social {
   display: flex;
@@ -1188,6 +1262,12 @@ textarea:focus {
 }
 
 .footer-bottom a:hover { color: var(--accent); }
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 /* ─── Footer logo keeps original brand colors ─────────────── */
 .brand-logo-footer {
