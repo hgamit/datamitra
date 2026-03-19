@@ -1121,13 +1121,13 @@ textarea:focus {
 
 .footer-bottom a:hover { color: var(--accent); }
 
-/* ─── Logo invert for dark bg ─────────────────────────────── */
+/* ─── Footer logo keeps original brand colors ─────────────── */
 .brand-logo-footer {
   height: 30px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  filter: none;
+  opacity: 1;
 }
 
 .brand-logo-footer:hover { opacity: 1; }
