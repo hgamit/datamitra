@@ -598,13 +598,13 @@ nav[aria-label="Main navigation"] {
 .dash-kpi-num {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--brand);
+  color: #ffffff;
   letter-spacing: -0.03em;
 }
 
 .dash-kpi-label {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.88);
   text-align: center;
   line-height: 1.35;
 }
@@ -1256,6 +1256,34 @@ textarea:focus {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-copy {
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .hero-trust li {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.84rem;
+  }
+
+  .dash-label {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .dash-kpi-label {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.7rem;
+  }
+
+  .footer-tagline,
+  .footer-links a,
+  .footer-social a,
+  .footer-bottom p,
+  .footer-bottom a {
+    color: rgba(255, 255, 255, 0.84);
   }
 }
 
