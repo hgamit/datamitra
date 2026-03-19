@@ -22,7 +22,7 @@
       href="https://fonts.cdnfonts.com/css/canva-sans"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=16" />
+    <link rel="stylesheet" href="styles.css?v=15" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -312,42 +312,35 @@
             </p>
           </div>
 
-          <div class="contact-actions">
-            <form id="lead-form" novalidate aria-describedby="form-status">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
-              </div>
-
-              <div class="field">
-                <label for="email">Work Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-
-              <div class="field">
-                <label for="company">Company</label>
-                <input id="company" name="company" type="text" autocomplete="organization" required />
-              </div>
-
-              <div class="field">
-                <label for="painPoint">Primary Pain Point</label>
-                <textarea id="painPoint" name="painPoint" rows="5" required></textarea>
-              </div>
-
-              <div class="field checkbox-field">
-                <input id="consent" name="consent" type="checkbox" required />
-                <label for="consent">I agree to be contacted by Datamitra regarding this inquiry.</label>
-              </div>
-
-              <button class="btn btn-primary" type="submit">Get My Next-Step Recommendation</button>
-              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            </form>
-
-            <div class="contact-scheduler" aria-label="Book a call">
-              <h3>Book a time directly</h3>
-              <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xJqnqefHxs3SN1HIREYC6RB4j2PEmnsV8QKAABn4OeJR5J7wa5IbnBYEcuv_zEXPeaNWHMFif?gv=true" style="border: 0" width="100%" height="600" frameborder="0" title="Datamitra appointment booking"></iframe>
+          <form id="lead-form" novalidate aria-describedby="form-status">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
-          </div>
+
+            <div class="field">
+              <label for="email">Work Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </div>
+
+            <div class="field">
+              <label for="painPoint">Primary Pain Point</label>
+              <textarea id="painPoint" name="painPoint" rows="5" required></textarea>
+            </div>
+
+            <div class="field checkbox-field">
+              <input id="consent" name="consent" type="checkbox" required />
+              <label for="consent">I agree to be contacted by Datamitra regarding this inquiry.</label>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Get My Next-Step Recommendation</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
