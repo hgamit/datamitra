@@ -394,7 +394,7 @@
           return;
         }
 
-        var bookingUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xJqnqefHxs3SN1HIREYC6RB4j2PEmnsV8QKAABn4OeJR5J7wa5IbnBYEcuv_zEXPeaNWHMFif?gv=true';
+        var bookingUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FUQxYby-SHyhyVcBf7xVcEHY242NLsDYYjzsNjG-u0UprrvH2GQXKTk11LdVNzRK6YGHO6Rc5?gv=true';
         var targets = document.querySelectorAll('.schedule-button-slot[data-schedule-label]');
 
         targets.forEach(function(target) {
@@ -404,7 +404,7 @@
 
           calendar.schedulingButton.load({
             url: bookingUrl,
-            color: '#A22828',
+            color: '#039BE5',
             label: target.dataset.scheduleLabel,
             target: target,
           });
