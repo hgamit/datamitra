@@ -26,7 +26,7 @@
     />
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <link rel="stylesheet" href="styles.css?v=22" />
+    <link rel="stylesheet" href="styles.css?v=23" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -351,8 +351,10 @@
             </div>
 
             <div class="field captcha-field">
-              <label for="captcha">Quick check: <span id="captcha-question" aria-live="polite"></span></label>
-              <input id="captcha" name="captcha" type="text" inputmode="numeric" autocomplete="off" required placeholder="Your answer" />
+              <div class="captcha-row">
+                <label for="captcha">Quick check: <span id="captcha-question" aria-live="polite"></span></label>
+                <input id="captcha" name="captcha" type="text" inputmode="numeric" autocomplete="off" required placeholder="Your answer" />
+              </div>
             </div>
 
             <button class="btn btn-primary" type="submit">Get My Next-Step Recommendation</button>
