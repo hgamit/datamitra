@@ -1203,6 +1203,12 @@ textarea:focus {
   line-height: 1.6;
 }
 
+.thankyou-book-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
 /* ─── Footer ──────────────────────────────────────────────── */
 .site-footer {
   background: #0d1117;

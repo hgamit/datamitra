@@ -174,9 +174,9 @@ if (form) {
 
     try {
       await submitToEndpoint(payload);
-      form.hidden = true;
+      form.style.display = 'none';
       const successEl = document.querySelector('#form-success');
-      if (successEl) successEl.hidden = false;
+      if (successEl) successEl.style.display = 'block';
       generateCaptcha();
       form.reset();
     } catch (error) {

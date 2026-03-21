@@ -26,7 +26,7 @@
     />
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <link rel="stylesheet" href="styles.css?v=21" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -317,6 +317,7 @@
             <div class="schedule-button-slot" data-schedule-label="Book an appointment"></div>
           </div>
 
+          <div id="contact-form-area">
           <form id="lead-form" novalidate aria-describedby="form-status">
             <div class="field">
               <label for="name">Name</label>
@@ -358,11 +359,13 @@
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
 
-          <div id="form-success" class="form-thankyou" hidden>
+          <div id="form-success" class="form-thankyou" style="display:none">
             <div class="thankyou-icon" aria-hidden="true">&#10003;</div>
             <h3>Thank you for reaching out!</h3>
-            <p>Our team will get back to you within 24-48 hours. If you need to schedule a meeting sooner, feel free to book an appointment below.</p>
-            <div class="schedule-button-slot" data-schedule-label="Book an appointment"></div>
+            <p>Our team will get back to you within 24&ndash;48 hours. If you need to schedule a meeting sooner, feel free to book an appointment below.</p>
+            <a class="btn btn-primary thankyou-book-btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FUQxYby-SHyhyVcBf7xVcEHY242NLsDYYjzsNjG-u0UprrvH2GQXKTk11LdVNzRK6YGHO6Rc5?gv=true" target="_blank" rel="noopener noreferrer">Book an appointment</a>
+          </div>
+          </div>
           </div>
         </div>
       </section>
