@@ -174,9 +174,11 @@ if (form) {
 
     try {
       await submitToEndpoint(payload);
-      setStatus("Thank you. Your message was submitted successfully.", "success");
-      form.reset();
+      form.hidden = true;
+      const successEl = document.querySelector('#form-success');
+      if (successEl) successEl.hidden = false;
       generateCaptcha();
+      form.reset();
     } catch (error) {
       if (String(error.message) === "FORM_ENDPOINT_NOT_CONFIGURED") {
         setStatus(
