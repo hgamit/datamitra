@@ -1320,9 +1320,9 @@ textarea:focus {
 
 .footer-bottom-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 1rem;
+  align-items: flex-start;
 }
 
 .footer-bottom p {
@@ -1343,7 +1343,8 @@ textarea:focus {
 .legal-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /* ─── Footer logo keeps original brand colors ─────────────── */
