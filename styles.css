@@ -1144,6 +1144,26 @@ textarea:focus {
 .form-status.success { color: #065f46; }
 .form-status.error   { color: #991b1b; }
 
+/* Honeypot - visually hidden, accessible for screen readers to skip */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Captcha question styling */
+.captcha-field label {
+  font-weight: 600;
+}
+
+#captcha {
+  max-width: 120px;
+}
+
 /* ─── Footer ──────────────────────────────────────────────── */
 .site-footer {
   background: #0d1117;

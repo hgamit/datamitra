@@ -104,10 +104,43 @@ async function submitToEndpoint(payload) {
   }
 }
 
+// ── Simple captcha ───────────────────────────────────────────
+let captchaAnswer = 0;
+
+function generateCaptcha() {
+  const a = Math.floor(Math.random() * 9) + 1;
+  const b = Math.floor(Math.random() * 9) + 1;
+  captchaAnswer = a + b;
+  const questionEl = document.querySelector('#captcha-question');
+  if (questionEl) questionEl.textContent = `What is ${a} + ${b}?`;
+  const captchaInput = document.querySelector('#captcha');
+  if (captchaInput) captchaInput.value = '';
+}
+
+generateCaptcha();
+
 if (form) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const consentCheckbox = form.querySelector('#consent');
+
+    // Honeypot check
+    const honeypot = form.querySelector('#website');
+    if (honeypot && honeypot.value.trim() !== '') {
+      form.reset();
+      generateCaptcha();
+      return;
+    }
+
+    // Math captcha check
+    const captchaInput = form.querySelector('#captcha');
+    if (!captchaInput || parseInt(captchaInput.value, 10) !== captchaAnswer) {
+      setStatus('Incorrect answer. Please try again.', 'error');
+      captchaInput && (captchaInput.value = '');
+      captchaInput && captchaInput.focus();
+      generateCaptcha();
+      return;
+    }
 
     if (!form.checkValidity()) {
       form.reportValidity();
@@ -143,6 +176,7 @@ if (form) {
       await submitToEndpoint(payload);
       setStatus("Thank you. Your message was submitted successfully.", "success");
       form.reset();
+      generateCaptcha();
     } catch (error) {
       if (String(error.message) === "FORM_ENDPOINT_NOT_CONFIGURED") {
         setStatus(
