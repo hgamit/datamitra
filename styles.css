@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-  Datamitra — Design System
+  Datamitra - Design System
   Canva Sans typography, logo-red brand system,
   deep navy hero, crisp card grids, mobile-first.
   ═══════════════════════════════════════════════════════════ */
@@ -17,13 +17,13 @@
   --text-2: #344054;
   --muted: #475467;
 
-  /* Brand — logo red */
+  /* Brand - logo red */
   --brand: #a22828;
   --brand-dark: #7f1f1f;
   --brand-light: #fde8e8;
   --brand-glow: rgba(162, 40, 40, 0.22);
 
-  /* Accent — tonal red */
+  /* Accent - tonal red */
   --accent: #c94a4a;
   --accent-dark: #962323;
 
@@ -201,7 +201,7 @@ img { max-width: 100%; display: block; }
   color: #fff;
 }
 
-/* Hero primary — logo red fill on dark */
+/* Hero primary - logo red fill on dark */
 .btn-hero-primary {
   background: var(--brand);
   color: #ffffff;
@@ -217,7 +217,7 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 4px 16px var(--brand-glow);
 }
 
-/* Hero ghost — logo red outline */
+/* Hero ghost - logo red outline */
 .btn-hero-ghost {
   background: transparent;
   color: rgba(255, 236, 236, 0.95);
@@ -245,7 +245,7 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 4px 12px var(--brand-glow);
 }
 
-/* Focus ring — accessible */
+/* Focus ring - accessible */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
